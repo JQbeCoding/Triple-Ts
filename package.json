@@ -1,0 +1,19 @@
+{
+  "name": "triple-ts",
+  "version": "1.0.0",
+  "description": "This document outlines the specific programming technologies and libraries integrated into the React front-end.",
+  "main": "webServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JQbeCoding/Triple-Ts.git"
+  },
+  "author": "Soxiety Technology Solutions",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JQbeCoding/Triple-Ts/issues"
+  },
+  "homepage": "https://github.com/JQbeCoding/Triple-Ts#readme"
+}
