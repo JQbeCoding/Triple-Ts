@@ -10,13 +10,13 @@
 - Her packaging will also be neat and cute, so the visual should be sharp!
 
 ## **Customer Vision**
-** This is the path from discovery to order ** 
+**This is the path from discovery to order** 
 - They search for cookies.
 - Views Triple T's marketing via social media and potentially search engines.
 - Customer visits Taylor's business and is stunned by the visual presence and fair pricing.
 - They then place an order
 - Customer is satisfied, and happily follows to stay informed.
-** Alternatively **
+**Alternatively**
 - Customers anticipate the weekend for cookies.
 - Customer gets a notification when the cookies are ready for pre-order.
 - Customer orders cookies.
