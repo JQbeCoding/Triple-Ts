@@ -1,0 +1,30 @@
+name: Jira State Change
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  update-jira:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Login to Jira
+      - name: Login
+        uses: atlassian/gajira-login@v3
+        env:
+          JIRA_BASE_URL: ${{ secrets.JIRAHOST }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRAEMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRATOKEN }}
+
+      # Step 2: Find the Ticket ID from the PR title
+      - name: Find Issue
+        id: find
+        uses: atlassian/gajira-find-issue-key@v3
+        with:
+          string: ${{ github.event.pull_request.title }}
+
+      # Step 3: Use the CLI to transition the ticket
+      - name: Transition Issue
+        uses: atlassian/gajira-cli@v3
+        with:
+          args: transition "Done" --issue ${{ steps.find.outputs.issue }}
