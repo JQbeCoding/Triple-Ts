@@ -1,16 +1,38 @@
-# React + Vite
+# **GREATEST COOKIES ON EARTH and SPREADING LOVE!!**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Technical Specification: Triple T Cookies
 
-Currently, two official plugins are available:
+This document outlines the specific programming technologies and libraries integrated into the React front-end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 1. Core Architecture
+* **React 18+**: Utilizing Functional Components and the Composition model.
+* **Vite**: Frontend tooling for Hot Module Replacement (HMR) and optimized production builds.
 
-## React Compiler
+## 2. State & Logic Management
+* **React Hooks**:
+    * `useState`: Manages UI states (e.g., inventory countdown, modal toggles).
+    * `useEffect`: Orchestrates the "Sunday Drop" timer and side effects.
+* **date-fns**: 
+    * *Purpose*: Calculating time remaining until the next Sunday at 8:00 AM.
+    * *Functionality*: Used for `formatDistance`, `isSunday`, and `nextSunday` helpers.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 3. Styling & Design System
+* **Tailwind CSS**: 
+    * Custom `tailwind.config.js` extension for brand colors (`#FFC6C5`, `#F3BC7B`, etc.).
+    * Mobile-first responsive design.
+* **clsx & tailwind-merge**: 
+    * *Purpose*: Preventing style conflicts when conditionally applying Tailwind classes.
+* **Lucide React**: 
+    * Tree-shakable SVG icons (ShoppingBag, Cookie, Clock).
 
-## Expanding the ESLint configuration
+## 4. Navigation & Routing
+* **react-router-dom**: 
+    * `BrowserRouter`: Enables client-side routing.
+    * `Routes` / `Route`: Maps URL paths to specific page components.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 5. Development Workflow (DevOps)
+* **Git/GitHub**: Branch-based development (`feature/` branch naming convention).
+* **ESLint/Prettier**: Enforcing code quality and consistent formatting within the IDE.
+* **Vercel/Netlify**: CI/CD pipeline for automated front-end deployments.
+
+---
